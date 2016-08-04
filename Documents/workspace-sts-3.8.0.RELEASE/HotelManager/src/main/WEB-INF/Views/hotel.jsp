@@ -75,6 +75,16 @@
 		</td>
 	</tr>
 	<tr>
+		<td>
+			<form:label path="pincode">
+				<spring:message text="Pincode"/>
+			</form:label>
+		</td>
+		<td>
+			<form:input path="pincode" />
+		</td>
+	</tr>
+	<tr>
 		<td colspan="2">
 			<c:if test="${!empty hotel.name}">
 				<input type="submit"
@@ -93,11 +103,12 @@
 <c:if test="${!empty hotelList}">
 	<table class="tg">
 	<tr>
-		<th width="80">Hotel ID</th>
-		<th width="120">Hotel Name</th>
-		<th width="120">Hotel Address</th>
-		<th width="120">Hotel City</th>
-		<th width="120">Hotel Country</th>
+		<th width="80">ID</th>
+		<th width="120">Name</th>
+		<th width="120">Address</th>
+		<th width="120">City</th>
+		<th width="120">Country</th>
+		<th width="120">Pincode</th>
 		<th width="60">Edit</th>
 		<th width="60">Delete</th>
 	</tr>
@@ -108,6 +119,7 @@
 			<td>${hotel.address}</td>
 			<td>${hotel.city}</td>
 			<td>${hotel.country}</td>
+			<td>${hotel.pincode}</td>
 			<td><a href="<c:url value='/edit/${hotel.id}' />" >Edit</a></td>
 			<td><a href="<c:url value='/remove/${hotel.id}' />" >Delete</a></td>
 		</tr>
