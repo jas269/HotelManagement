@@ -19,7 +19,7 @@ public class Hotel {
 	private String address;
 	private String city;
 	private String country;
-	private long pincode;
+	private int pincode;
 	public int getId() {
 		return id;
 	}
@@ -50,10 +50,10 @@ public class Hotel {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public long getPincode() {
+	public int getPincode() {
 		return pincode;
 	}
-	public void setPincode(long pincode) {
+	public void setPincode(int pincode) {
 		this.pincode = pincode;
 	}
 	@Override
